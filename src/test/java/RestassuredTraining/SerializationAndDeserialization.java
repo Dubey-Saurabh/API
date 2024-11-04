@@ -8,7 +8,7 @@ public class SerializationAndDeserialization {
     @Test
     public void pojoToJson() {
 
-        POSTRequestCreationUsingPOJOClass data = new POSTRequestCreationUsingPOJOClass();
+        POJOClass data = new POJOClass();
         String subjectsArr[] = {"Math", "Physics", "English"};
         data.setName("Test Abc");
         data.setAge(12);

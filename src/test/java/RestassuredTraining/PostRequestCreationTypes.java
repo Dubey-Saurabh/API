@@ -28,8 +28,11 @@ public class PostRequestCreationTypes {
         data.put("grade", "12th");
         data.put("subjects", subjectsArr);
 
-        given().contentType("application/json").body(data).when().post(endUrl).then().statusCode(201)
-                .body("name", equalTo("John Doe")).body("subjects[0]", equalTo("Math"))
+        given()
+                .contentType("application/json").body(data)
+                .when().post(endUrl).then().statusCode(201)
+                .body("name", equalTo("John Doe"))
+                .body("subjects[0]", equalTo("Math"))
                 .header("Content-type", "application/json").log().all();
 
     }
@@ -46,8 +49,11 @@ public class PostRequestCreationTypes {
         data.put("grade", "11th");
         data.put("subjects", subjectsArr);
 
-        given().contentType("application/json").body(data.toString()).when().post(endUrl).then().statusCode(201)
-                .body("name", equalTo("John Singh")).body("subjects[0]", equalTo("Math"))
+        given()
+                .contentType("application/json").body(data.toString())
+                .when().post(endUrl).then().statusCode(201)
+                .body("name", equalTo("John Singh"))
+                .body("subjects[0]", equalTo("Math"))
                 .header("Content-type", "application/json").log().body();
 
     }
@@ -56,7 +62,7 @@ public class PostRequestCreationTypes {
     @Test(priority = 3)
     public void postUsingPojoBody() {
 
-        POSTRequestCreationUsingPOJOClass data = new POSTRequestCreationUsingPOJOClass();
+        POJOClass data = new POJOClass();
         String subjectsArr[] = {"Math", "Physics", "English"};
         data.setName("Test Abc");
         data.setAge(12);
@@ -64,13 +70,16 @@ public class PostRequestCreationTypes {
         data.setSubjectsArr(subjectsArr);
 
 
-        given().contentType("application/json").body(data).when().post(endUrl).then().statusCode(201)
-                .body("name", equalTo("Test Abc")).body("subjectsArr[0]", equalTo("Math"))
+        given()
+                .contentType("application/json").body(data)
+                .when().post(endUrl).then().statusCode(201)
+                .body("name", equalTo("Test Abc"))
+                .body("subjectsArr[0]", equalTo("Math"))
                 .header("Content-type", "application/json").log().body();
 
     }
 
-    //By using POJO Class request body
+    //By using external json file
     @Test(priority = 4)
     public void postUsingExternalJsonFile() throws FileNotFoundException {
 
@@ -80,8 +89,11 @@ public class PostRequestCreationTypes {
         JSONTokener jt = new JSONTokener(fr);
         JSONObject data = new JSONObject(jt);
 
-        given().contentType("application/json").body(data.toString()).when().post(endUrl).then().statusCode(201)
-                .body("name", equalTo("Jane Dubey")).body("subjects[0]", equalTo("Biology"))
+        given()
+                .contentType("application/json").body(data.toString())
+                .when().post(endUrl).then().statusCode(201)
+                .body("name", equalTo("Jane Dubey"))
+                .body("subjects[0]", equalTo("Biology"))
                 .header("Content-type", "application/json").log().body();
 
     }

@@ -11,9 +11,12 @@ public class PathAndQueryParamConcept {
     @Test
     public void pathAndQueryParam(){
 
-        given().pathParam("users","users")
-                .queryParam("page",2).queryParam("id",5)
-                .when().get("https://reqres.in/api/{users}").then().statusCode(200).log().body();
+        given()
+                .pathParam("users","users")
+                .queryParam("page",2)
+                .queryParam("id",5)
+                .when().get("https://reqres.in/api/{users}")
+                .then().statusCode(200).log().body();
 
     }
 

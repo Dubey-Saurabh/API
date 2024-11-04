@@ -1,6 +1,6 @@
 package RestassuredTraining;
 
-public class POSTRequestCreationUsingPOJOClass {
+public class POJOClass {
 
     String name;
     int age;

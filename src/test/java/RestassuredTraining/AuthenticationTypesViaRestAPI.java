@@ -16,7 +16,6 @@ public class AuthenticationTypesViaRestAPI {
                 .auth().basic("postman", "password")
                 .when().get(endPoint).then().statusCode(200).log().body();
 
-
     }
 
     @Test
@@ -27,7 +26,6 @@ public class AuthenticationTypesViaRestAPI {
         given()
                 .auth().digest("postman", "password")
                 .when().get(endPoint).then().statusCode(200).body("authenticated", equalTo(true)).log().body();
-
 
     }
 
@@ -40,7 +38,6 @@ public class AuthenticationTypesViaRestAPI {
                 .auth().preemptive().basic("postman", "password")
                 .when().get(endPoint).then().statusCode(200).body("authenticated", equalTo(true)).log().body();
 
-
     }
 
     @Test
@@ -52,8 +49,6 @@ public class AuthenticationTypesViaRestAPI {
         given()
                 .headers("Authorization", "Bearer " + bearerToken)
                 .when().get(endPoint).then().statusCode(200);
-
-
     }
 
     @Test
@@ -63,7 +58,6 @@ public class AuthenticationTypesViaRestAPI {
         given()
                 .auth().oauth("ConsumerKey", "ConsumerSecret", "accessToken", "TokenSecret")
                 .when().get(endPoint).then().statusCode(200);
-
 
     }
 

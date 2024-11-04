@@ -33,9 +33,9 @@ public class CookieConcept {
         Map<String,String> data = response.getCookies();
         System.out.println(data.keySet()); // Cookies name
 
-        for (String k : data.keySet()){
-            String cookieValues = response.getCookie(k);
-            System.out.println(k+ " : " + cookieValues);
+        for (String cookie : data.keySet()){
+            String cookieValues = response.getCookie(cookie);
+            System.out.println(cookie+ " : " + cookieValues);
         }
 
     }

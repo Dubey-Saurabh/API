@@ -37,7 +37,7 @@ public class HeaderConcept {
                 .header("Server", "gws")
 //                .log().body(); // only response body will print
 //                .log().all(); //all response will print
-//                .log().cookies(); // reponse cookies will print
+//                .log().cookies(); // response cookies will print
                 .log().headers(); // only response headers will print
 
     }

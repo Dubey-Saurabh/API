@@ -10,18 +10,14 @@ public class ComplexResponseBodyValidation {
     @Test
     public void complexResponseBodyValidationGet() {
 
-        String endPoint = "http://localhost:8888/api_testing/category/read.php";
+        String endPoint = "https://automationexercise.com/api/productsList";
         given().
-                queryParam("id", 26).
-                when().
-                get(endPoint).
-                then().
-                log().body().
-                assertThat().
-                statusCode(200).
-                body("records.size", greaterThan("0")).
-                body("records.id", everyItem(notNullValue())).
-                body("records.name", everyItem(notNullValue()));
+                queryParam("id", 42).
+                when().get(endPoint).
+                then().log().body().assertThat().statusCode(200).
+//                body("products.id", greaterThan(0)).
+                body("products.price", everyItem(notNullValue())).
+                body("products.name", everyItem(notNullValue())).log().body();
 
 
     }

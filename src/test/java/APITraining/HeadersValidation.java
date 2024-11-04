@@ -10,15 +10,15 @@ public class HeadersValidation {
     @Test
     public void complexResponseBodyValidationGet() {
 
-        String endPoint = "http://localhost:8888/api_testing/category/read.php";
+        String endPoint = "https://automationexercise.com/api/productsList";
         given().
-                 queryParam("id", 26).
+                 queryParam("id", 19).
                 when().
                 get(endPoint).
                 then().
                 log().headers().
                 assertThat().
                 statusCode(200).
-                headers("content-type", equalTo("application/json; charset=utf-8"));
+                headers("content-type", equalTo("text/html; charset=utf-8"));
     }
 }

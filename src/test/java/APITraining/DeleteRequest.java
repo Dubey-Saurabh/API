@@ -9,7 +9,7 @@ public class DeleteRequest {
     @Test
     public void deleteProduct() {
 
-        String endPoint = "http://localhost:8888/api_testing/category/read.php";
+        String endPoint = "https://automationexercise.com/api/productsList";
 
         String body = """
                 {
