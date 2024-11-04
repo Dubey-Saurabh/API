@@ -1,0 +1,12 @@
+1.Download and  install Node.js >> npm will automatically install in node.js
+2.Check whether its being installed right
+   open command prompt: run below commands
+   node --version
+   np --version
+3. run below command
+  npm install -g json server
+4.add a json file (lets say student.json in this case) and save it in your local
+5.Go to that file location and run below command
+  json-server student.json
+6. SUCCESS!
+

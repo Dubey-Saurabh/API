@@ -1,0 +1,21 @@
+given()
+content-type,set cookies,add auth,add param,set headers info etc..
+
+when()
+    get,post,put, delete and all
+
+then()
+    validate status code, extract response,extract header cookies and response body
+ _______________________________________________________________________________________
+
+ For Json response schema validation we use:
+JsonSchemaValidator.matchesJsonSchemaInClassPath(schemaJson file name)
+
+ For XML response schema validation we use:
+RestAssuredMatchers.matchesXsdInClassPath(schemaJson file name)
+
+---------------------------------------------------------------------------------
+
+Convert Java object to Json Object:
+ObjectMapper ob = new ObjectMapper();
+ob.writerWithDefaultPrettyPrinter().writeValueAsString(ob);

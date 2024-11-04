@@ -1,0 +1,10 @@
+{
+      "name": "Jane Dubey",
+      "age": 21,
+      "grade": "7th",
+      "subjects": [
+        "Biology",
+        "Chemistry",
+        "History"
+      ]
+    }
