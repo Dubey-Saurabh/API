@@ -19,3 +19,7 @@ RestAssuredMatchers.matchesXsdInClassPath(schemaJson file name)
 Convert Java object to Json Object:
 ObjectMapper ob = new ObjectMapper();
 ob.writerWithDefaultPrettyPrinter().writeValueAsString(ob);
+
+Note: JSON Array is a collection of JSON objects
+
+Note: Unknown properties of JSON: Object parameters which are present in Object but not defined in its pojo class

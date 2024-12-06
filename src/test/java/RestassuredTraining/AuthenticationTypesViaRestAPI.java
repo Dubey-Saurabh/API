@@ -1,5 +1,9 @@
 package RestassuredTraining;
 
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -26,6 +30,21 @@ public class AuthenticationTypesViaRestAPI {
         given()
                 .auth().digest("postman", "password")
                 .when().get(endPoint).then().statusCode(200).body("authenticated", equalTo(true)).log().body();
+
+    }
+
+    @Test
+    public void basicAuthValidaion() {
+
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.baseUri("https://postman-echo.com");
+        requestSpecification.basePath("/basic-auth");
+
+        Response response = requestSpecification.auth().preemptive().basic("postman","password").when().get();
+        Assert.assertEquals(response.getStatusCode(),200);
+        String header = response.getHeader("Content-Type");
+        Assert.assertEquals(header,"application/json; charset=utf-8", "Header is wrong");
+        response.then().log().all();
 
     }
 

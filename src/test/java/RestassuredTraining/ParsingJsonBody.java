@@ -29,6 +29,8 @@ public class ParsingJsonBody {
         Assert.assertEquals(response.header("Content-Type"), "application/json");
         String bookTitle = response.jsonPath().get("book[3].title").toString();
         Assert.assertEquals(bookTitle, "The lord of the rings");
+        String statusLine = response.getStatusLine();
+        Assert.assertEquals(statusLine,"HTTP/1.1 200 OK","Incorrect Status line");
 
     }
 
