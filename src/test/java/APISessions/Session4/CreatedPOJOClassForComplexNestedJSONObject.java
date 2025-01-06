@@ -33,9 +33,6 @@ public class CreatedPOJOClassForComplexNestedJSONObject {
         requestPayload.setBankAccount(banks);
 
         EmployeePOJO emp1 = new EmployeePOJO();
-        EmployeePOJO emp2 = new EmployeePOJO();
-        EmployeePOJO emp3 = new EmployeePOJO();
-
         emp1.setFirstname("Suresh");
         emp1.setLastname("Mehra");
         emp1.setGender("Male");
@@ -49,6 +46,7 @@ public class CreatedPOJOClassForComplexNestedJSONObject {
         emp1Address.setPinCode(530012);
         emp1.setAddress(emp1Address);
 
+        EmployeePOJO emp2 = new EmployeePOJO();
         emp2.setFirstname("Amit");
         emp2.setLastname("Gupta");
         emp2.setGender("Male");
@@ -61,6 +59,7 @@ public class CreatedPOJOClassForComplexNestedJSONObject {
         empAddress.setPinCode(530012);
         emp2.setAddress(empAddress);
 
+        EmployeePOJO emp3 = new EmployeePOJO();
         emp3.setFirstname("Ashish");
         emp3.setLastname("Das");
         emp3.setGender("Male");

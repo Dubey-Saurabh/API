@@ -1,4 +1,4 @@
-package RestassuredTraining;
+package APISessions.Session13;
 
 public class POJOClass {
 

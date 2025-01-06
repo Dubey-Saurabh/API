@@ -12,7 +12,6 @@ public class NestedJSONPojoClass {
     private String state;
     private String pinCode;
     private List<String > bankAccount;
-
     private List<EmployeePOJO> employeeList;
 
     public String getCompanyName() {

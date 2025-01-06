@@ -1,5 +1,6 @@
-package RestassuredTraining;
+package APISessions.Session13;
 
+import APISessions.Session13.POJOClass;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.Test;
@@ -39,7 +40,7 @@ public class PostRequestCreationTypes {
 
     //By using json request body
     @Test(priority = 2)
-    public void postUsingJsonRequestBody() {
+    public void postUsingJsonObject() {
 
         String subjectsArr[] = {"Math", "Physics", "English"};
 
@@ -60,7 +61,7 @@ public class PostRequestCreationTypes {
 
     //By using POJO Class request body
     @Test(priority = 3)
-    public void postUsingPojoBody() {
+    public void postUsingPojo() {
 
         POJOClass data = new POJOClass();
         String subjectsArr[] = {"Math", "Physics", "English"};

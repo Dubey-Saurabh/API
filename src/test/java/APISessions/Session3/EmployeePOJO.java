@@ -7,6 +7,7 @@ public class EmployeePOJO {
     private String gender;
     private int age;
     private double salary;
+    private AddressPOJO address;
 
     public AddressPOJO getAddress() {
         return address;
@@ -16,7 +17,6 @@ public class EmployeePOJO {
         this.address = address;
     }
 
-    private AddressPOJO address;
 
     public String getFirstname() {
         return firstname;

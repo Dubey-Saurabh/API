@@ -1,4 +1,4 @@
-package RestassuredTraining;
+package APISessions.Session11;
 
 import com.github.javafaker.Faker;
 import org.testng.annotations.Test;

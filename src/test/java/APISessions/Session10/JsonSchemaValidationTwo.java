@@ -19,7 +19,7 @@ public class JsonSchemaValidationTwo {
                 }
                 """;
 
-        MatcherAssert.assertThat(json,JsonSchemaValidator.matchesJsonSchema(new File("C:\\Users\\Saurabh_Dubey\\Downloads\\schemavalidation.json")));
+        MatcherAssert.assertThat(json, JsonSchemaValidator.matchesJsonSchema(new File("C:\\Users\\Saurabh_Dubey\\Downloads\\schemavalidation.json")));
     }
 
 

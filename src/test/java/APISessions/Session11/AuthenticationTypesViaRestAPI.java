@@ -1,4 +1,4 @@
-package RestassuredTraining;
+package APISessions.Session11;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

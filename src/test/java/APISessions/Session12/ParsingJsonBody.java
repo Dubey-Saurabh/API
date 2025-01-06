@@ -1,4 +1,4 @@
-package RestassuredTraining;
+package APISessions.Session12;
 
 import io.restassured.response.Response;
 import org.json.JSONObject;
